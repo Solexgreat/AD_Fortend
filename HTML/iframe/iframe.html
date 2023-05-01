@@ -2,3 +2,25 @@
   allowfullscreen=""
   allow="encrypted-media"
   width="960" height="540"></iframe>
+
+  <!--In-Page embed code (Advanced)-->
+  <video-js data-account="1507807800001"
+  data-player="rf1BTdKk6M"
+  data-embed="default"
+  controls=""
+  data-video-id="6116779877001"
+  data-playlist-id=""
+  data-application-id=""
+  width="960" height="540"></video-js>
+<script src="https://players.brightcove.net/1507807800001/rf1BTdKk6M_default/index.min.js"></script>
+
+<!--Note: The iframe will be able to access the parent page's full URL as long as the parent page has the header referrer-policy: no-referrer-when-downgrade. 
+    This means that the header referrer will be sent to the iframe with the full parent page's URL because both protocols match.-->
+
+<!--Although integrating the In-Page publishing code can be more complex, using the In-Page code is best when the page containing the player needs to communicate with the player. Some examples of when to use the In-Page embed code include:
+
+The code in the containing page needs to listen for and act on player events
+The player uses styles from the parent page
+The iframe code will cause application logic to fail, like a redirect from the parent page
+Even if your final implementation does not use the iframe embed code, you can still use the In-Page code with a plugin for your JavaScript and a separate file for your CSS. 
+This encapsulates your logic so that you can easily use it in multiple players.-->
