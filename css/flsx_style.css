@@ -4,6 +4,7 @@
     align-items:flex-end;
     flex-wrap: wrap;
     flex-direction: column;
+    gap:10px;
 }
 .box3{
     background-color: blanchedalmond;
