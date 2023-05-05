@@ -16,6 +16,12 @@ main {
     padding: 2em
 }
 
+footer {
+    background-color: #A5C9CA;
+    text-align: center;
+    padding: 2em;
+}
+
 .flex-container{
     display: flex;
     justify-content: center;
