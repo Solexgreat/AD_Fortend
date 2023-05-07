@@ -53,6 +53,7 @@ div > h3 {
 div > h3 {
     font-size: 20px;
     margin: 20px;
+    text-align: center;
 }
 
 /* Add rules for the steps mentioned below */
