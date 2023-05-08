@@ -1,0 +1,9 @@
+.row {
+    display: flex;
+    align-items: stretch;
+}
+
+.label {
+    flex: 0 0 auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
