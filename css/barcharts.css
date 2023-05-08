@@ -15,7 +15,7 @@
 }
 
 .bar {
-   border-color: white;
+   border-right: 1px solid white;
 }
 
 .male {
