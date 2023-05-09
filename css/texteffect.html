@@ -22,6 +22,20 @@
         .text:hover {
             overflow: visible;
         }
+
+        p {
+            width: 50px;
+            overflow: hidden;
+            border: 2px solid brown;
+        }
+
+        .wrap {
+            word-wrap: break-word;
+        }
+
+        .vert {
+            writing-mode: vertical-rl;
+        }
     </style>
 </head>
 
@@ -29,10 +43,15 @@
     <h1 style="color: brown">
     vertical text</h1>
 
-    <div class="text">
+   <!--- <div class="text">
         This is an sample writ-up to know the use of clip ptoperty 
         of large content
-    </div>
+    </div>-->
+    <p>Th3e chefs draw inspiration from italian, greek
+        and turkish culture
+    </p>
+    <p class="vert">12-15 items</p>
+    <p>that they rotate seasonally</p>
 </body>
 
 </html>
