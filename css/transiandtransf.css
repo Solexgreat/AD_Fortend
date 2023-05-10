@@ -36,7 +36,7 @@ p {
 }
 
 .letters:hover p:nth-child(odd) {
-	transform: rotateY(360deg);
+	transform: rotateX(360deg);
 	transition: 1.5s;
 }
 
