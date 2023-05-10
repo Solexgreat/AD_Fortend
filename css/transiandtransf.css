@@ -25,10 +25,20 @@ p {
     width: 70px;
     margin-right: 1.5px;
     border-radius: 15%;
+    border-color: rgb(250, 125, 75);
+    border-style: solid;
 }
 
 
-/* Add rules for steps 8 and 9 */
+.letters:hover p:nth-child(even) {
+	transform: rotateY(360deg);
+	transition: 0.5s;
+}
+
+.letters:hover p:nth-child(odd) {
+	transform: rotateY(360deg);
+	transition: 1.5s;
+}
 
 
 /* Add rules for steps 10 and 11 */
