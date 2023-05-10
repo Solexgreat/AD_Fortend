@@ -22,6 +22,9 @@
 p {
 	text-align : center;
     background-color: rgb(250, 150, 100);
+    width: 70px;
+    margin-right: 1.5px;
+    border-radius: 15%;
 }
 
 
