@@ -31,7 +31,7 @@ p {
 
 
 .letters:hover p:nth-child(even) {
-	transform: rotateY(720deg);
+	transform: rotateY(720deg)
 	transition: 0.5s;
 }
 
