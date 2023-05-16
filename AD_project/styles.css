@@ -1,5 +1,5 @@
 body {
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     font-family: 'Markazi Text', serif;
     margin: 1rem 3rem 5% 5%;
 }
@@ -44,3 +44,70 @@ section {
     margin: 2rem;
 }
 
+article {
+    display: inline-flex;
+    flex: 1;
+    justify-content: center;
+}
+
+.design {
+    background-color: rgb(206, 49, 49);
+    padding: 2.2rem;
+    margin: 2rem;
+    border-radius: 1rem;
+    color: white;
+    box-shadow: 1px 2px 1px 2px rgb(237, 206, 206);
+}
+
+.maintenance {
+    background-color: rgb(237, 206, 206);
+    border-radius: 1rem;
+    border: 1px solid rgb(206, 49, 49);
+    padding: 2.2rem;
+    margin: 2rem;
+    box-shadow: 1px 2px 1px 2px rgb(206, 49, 49);
+    font-size: 1rem;
+}
+
+.selling {
+    justify-content: center;
+    background-color: rgb(206, 49, 49);
+    padding: 2.2rem;
+    margin: 2rem;
+    border-radius: 1rem;
+    color: white;
+    box-shadow: 1px 2px 1px 2px rgb(237, 206, 206);
+    font-size: 1rem;
+}
+
+.selling > button {
+    border-radius: 2rem;
+    border: 2rem rgb(206, 49, 49);
+    background-color: white;
+    padding: 1rem;
+    margin: 0px 90px;
+}
+
+footer {
+    display: flex;
+    background-color: brown;
+}
+
+footer div {
+    flex: 1;
+    padding: 2rem;
+    font-size: 1rem;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer li{
+    display: list-item;
+    margin: 1rem;
+}
+
+footer a {
+    
+}
