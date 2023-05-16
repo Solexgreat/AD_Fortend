@@ -31,6 +31,16 @@ nav a {
     padding: 20px;
     margin: 0px 20px;
     text-decoration: none;
+    color: black;
+    font-size: 1.3rem;
+}
+
+a:hover {
+    color: rgb(160, 160, 17);
+}
+
+button:hover {
+    color: rgb(20, 189, 48);
 }
 
 section {
@@ -86,21 +96,25 @@ article {
     background-color: white;
     padding: 1rem;
     margin: 0px 90px;
+    font-size: 1.2rem;
 }
 
 footer {
     display: flex;
     background-color: brown;
+    align-items: center;
 }
 
 footer div {
     flex: 1;
     padding: 2rem;
     font-size: 1rem;
+    color:rgb(255, 255, 255);
 }
 
 footer ul {
     list-style: none;
+    flex-flow: row wrap;
 }
 
 footer li{
@@ -109,5 +123,16 @@ footer li{
 }
 
 footer a {
-    
+    text-decoration: none;
+    color:rgb(255, 255, 255);
+    text-align: center;
+}
+
+footer .img {
+    background-color: rgb(237, 206, 206);
+    margin: 0px;
+}
+
+.img img {
+    margin: 0 9rem;
 }
