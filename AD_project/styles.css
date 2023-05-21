@@ -45,17 +45,14 @@ button:hover {
 
 
 .headerImage {
-    background-color: rgb(178, 36, 210);
-    padding: 2rem;
+    background-image: url('Garden-1.jpg');
+    background-size: cover;
     margin: 2rem;
+    border-radius: 3rem;
 }
 
 .headerImage img {
-    display: flexbox;
-    padding: 3rem;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
+
 }
 
 section {
