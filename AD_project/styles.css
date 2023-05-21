@@ -1,7 +1,7 @@
 body {
     background-color: rgb(255, 255, 255);
     font-family: 'Markazi Text', serif;
-    margin: 1rem 3rem 5% 5%;
+    margin: 3rem 3rem 5% 5%;
 }
 
 h1 {
@@ -46,6 +46,8 @@ button:hover {
 
 .headerImage {
     background-color: rgb(178, 36, 210);
+    padding: 2rem;
+    margin: 2rem;
 }
 
 .headerImage img {
