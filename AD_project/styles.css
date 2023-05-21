@@ -5,7 +5,9 @@ body {
 }
 
 h1 {
+    display: block;
     font-size: 2rem;
+    padding: 2rem;
 }
 
 h2 {
@@ -18,6 +20,13 @@ header > img {
     margin-right: auto;
 }
 
+.nav-bar {
+    background-color: rgb(206, 49, 49);
+    padding: 0.5rem;
+    margin: 1rem;
+    border-radius: 2rem ;
+}
+
 nav  ul {
     list-style: none;
     text-align: center;
@@ -28,8 +37,8 @@ nav li {
 }
 
 nav a {
-    padding: 20px;
-    margin: 0px 15px;
+    padding: 0.5rem;
+    margin: 0.5rem;
     text-decoration: none;
     color: black;
     font-size: 1.3rem;
@@ -48,14 +57,14 @@ button:hover {
     background-image: url('Garden-1.jpg');
     background-size: cover;
     background-position: center;
-    width: 1150px;
+    width: 1250px;
     height: 300px;
     border-radius: 3rem;
     margin: auto;
 }
 
 .headerImage .Imagediv {
-    background-color: rgba(241, 235, 235, 0.322);
+    background-color: rgba(254, 254, 254, 0.019);
     padding: 9.4rem;
 }
 
@@ -68,6 +77,10 @@ section {
     text-align: center;
     padding: 2rem;
     margin: 2rem;
+}
+
+main {
+    background-color: rgb(237, 206, 206);
 }
 
 article {
@@ -124,6 +137,13 @@ article {
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 2rem;
+}
+
+#show-image {
+    display: block;
+    text-align: center;
+    padding: auto;
+    margin: auto;
 }
 
 .item {
