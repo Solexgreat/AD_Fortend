@@ -1,7 +1,7 @@
 body {
     background-color: rgb(255, 255, 255);
     font-family: 'Markazi Text', serif;
-    margin: 3rem 3rem 5% 5%;
+    margin: 3rem 3rem  5%;
 }
 
 h1 {
@@ -47,12 +47,16 @@ button:hover {
 .headerImage {
     background-image: url('Garden-1.jpg');
     background-size: cover;
-    margin: 2rem;
+    background-position: center;
+    width: 1150px;
+    height: 300px;
     border-radius: 3rem;
+    margin: auto;
 }
 
-.headerImage img {
-
+.headerImage .Imagediv {
+    background-color: rgba(241, 235, 235, 0.322);
+    padding: 9.4rem;
 }
 
 section {
