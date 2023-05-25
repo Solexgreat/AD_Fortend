@@ -1,3 +1,4 @@
+import Heading from "./Heading";
 /**import logo from './logo.svg';
 import './App.css';
 
@@ -21,8 +22,6 @@ function App() {
     </div>
   );
 }*/
-
-import Heading from "./Heading";
 
 function App() {
     return (
