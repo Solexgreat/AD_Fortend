@@ -26,7 +26,8 @@ function App() {
 function App() {
     return (
         <div className="App">
-            <Heading firstname = "Bob"/>
+            <Heading firstName = "Bob"/>
+            <Heading firstName="Any name other than Bob" />
         </div>
     );
 };
