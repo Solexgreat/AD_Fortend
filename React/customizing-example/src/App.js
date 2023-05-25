@@ -29,7 +29,7 @@ function App() {
         <div className="App">
             <Heading firstName = "Bob"/>
             <Heading firstName="Any name other than Bob" />
-            <Card h2="First card's h2"/>
+            <Card h2="First card's h2" h3="First card's h3"/>
         </div>
 
     );
