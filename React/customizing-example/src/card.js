@@ -9,3 +9,5 @@ function Card(props) {
 }
 
 export default Card;
+
+/**npm init react-app customizing-example */
