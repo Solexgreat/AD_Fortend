@@ -10,4 +10,4 @@ function Card(props) {
 
 export default Card;
 
-/**npm init react-app customizing-example */
+npm init react-app customizing-example
