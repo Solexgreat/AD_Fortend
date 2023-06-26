@@ -1,12 +1,12 @@
-import Fruits from "./Fruits";
+import Fruits from "./fruits";
 import FruitsCounter from "./FruitsCounter";
 
 function App() {
   return (
     <div className="App">
       <h1>Where should the state go?</h1>
-      <Fruits />
-      <FruitsCounter />
+      <Fruits fruits= {fruits} />
+      <FruitsCounter fruits= {fruits} />
     </div>
   );
 }
