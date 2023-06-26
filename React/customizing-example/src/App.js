@@ -1,6 +1,8 @@
 import Heading from "./Heading";
 import Card from "./Card";
 
+/** npm init react-app example, */
+
 /**import logo from './logo.svg';
 import './App.css';
 
