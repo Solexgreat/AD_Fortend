@@ -11,11 +11,17 @@ function App() {
     e.prevenDefault();
     if (Number(score) <= 5 &&  comment.length < 10) {
       alert("Please provide a comment explaining why the experience was poor.")
+      return;
     }
+
+    console.log("form submitted!")
+    setScore("10");
+    setComment("");
+
   }
   return (
     <div className="feedback">
-      <form>
+      <form onSubmit={handleSubmit}>
         <fieldset>
         <h1>Feedback form</h1>
         <div className="Field">
