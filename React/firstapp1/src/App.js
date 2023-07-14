@@ -8,7 +8,7 @@ function App() {
   const [comment, setComment] = useState("")
 
   const handelSubmit = (e) => {
-    e.prevenDefault();
+    e.preventDefault();
     if (Number(score) <= 5 &&  comment.length < 10) {
       alert("Please provide a comment explaining why the experience was poor.")
       return;
@@ -21,7 +21,7 @@ function App() {
   }
   return (
     <div className="feedback">
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handelSubmit}>
         <fieldset>
         <h1>Feedback form</h1>
         <div className="Field">
