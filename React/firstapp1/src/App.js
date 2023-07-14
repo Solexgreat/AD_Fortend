@@ -6,6 +6,13 @@ import {useState} from "react"
 function App() {
   const [score, setScore] = useState("10")
   const [comment, setComment] = useState("")
+
+  const handelSubmit = (e) => {
+    e.prevenDefault();
+    if (Number(score) <= 5 &&  comment.length < 10) {
+      alert("Pl")
+    }
+  }
   return (
     <div className="feedback">
       <form>
