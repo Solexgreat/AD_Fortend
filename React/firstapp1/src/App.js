@@ -10,7 +10,7 @@ function App() {
   const handelSubmit = (e) => {
     e.prevenDefault();
     if (Number(score) <= 5 &&  comment.length < 10) {
-      alert("Pl")
+      alert("Please provide a comment explaining ")
     }
   }
   return (
