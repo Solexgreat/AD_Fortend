@@ -14,7 +14,8 @@ function App() {
     const getIsFormValid = () => {
         return(firstName &&
             validateEmail(email) && 
-            password.value.lenght)
+            password.value.lenght >= 8 &&
+            role !== "role")
     }
 
     const clearForm = () => {
@@ -40,7 +41,7 @@ function App() {
                     <h2>Sign Up</h2>
                     <div className="Field">
                         <label>First Name <sup>*</sup> </label>
-                        <input placeholder="firstname"/>
+                        <input value={firstName} placeholder="firstname"/>
                     </div>
                     <div className="Field">
                         <label>Last Name <sup>*</sup> </label>
