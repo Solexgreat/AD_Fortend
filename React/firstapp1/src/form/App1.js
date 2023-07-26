@@ -11,6 +11,66 @@ function App() {
 });
     const [role, setRole] = useState("role");
 
-    return
+    const getIsFormValid = () => {
+        return(firstName &&
+            validateEmail(email) && 
+            password.value.lenght)
+    }
+
+    const clearForm = () => {
+        setFirstName("");
+        setLastName("");
+        setEmail("");
+        setPassword({
+            value: "",
+            isTouched: false,
+        });
+        setRole("role");
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        clearForm();
+    }
+
+    return (
+        <div className="App">
+            <form>
+                <fieldset>
+                    <h2>Sign Up</h2>
+                    <div className="Field">
+                        <label>First Name <sup>*</sup> </label>
+                        <input placeholder="firstname"/>
+                    </div>
+                    <div className="Field">
+                        <label>Last Name <sup>*</sup> </label>
+                        <input placeholder="lastname"/>
+                    </div>
+                    <div className="Field">
+                        <label>
+                            Email <sup>*</sup>
+                        </label>
+                        <input placeholder="email"/>
+                    </div>
+                    <div className="Field">
+                        <label>
+                            Password <sup>*</sup>
+                        </label>
+                        <input placeholder="password"/>
+                    </div>
+                    <div className="Field">
+                        <label>
+                            Role <sup>*</sup>
+                        </label>
+                        <select > 
+                            <option value="role"> Role </option>
+                            <option value="individuals">Individuals</option>
+                            <option value="business">Business</option>
+                        </select>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    )
 
 }
