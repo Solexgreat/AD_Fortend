@@ -1,8 +1,9 @@
 /**import logo from './logo.svg';*/
 import './App.css';
 import './index.css';
-import {useState} from "react"
+/**import {useState} from "react"*
 
+**REGISTRATION Form***
 const PasswordErrorMessage = () => {
   return (
     <p className="FieldError">Password should have at least 8 characters</p>
@@ -106,7 +107,9 @@ function App() {
       </form>
     </div>
   );
-}
+}*/
+
+//CONTROL FORM Comment
 
 /**function App() {
   const [score, setScore] = useState("10")
@@ -148,6 +151,7 @@ function App() {
   )
 }*/
 
+//**ToDo */
 /**const ToDo = props => {
     <tr>
         <td>

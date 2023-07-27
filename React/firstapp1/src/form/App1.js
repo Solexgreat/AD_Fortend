@@ -81,6 +81,7 @@ function App() {
                             <option value="business">Business</option>
                         </select>
                     </div>
+                    
                 </fieldset>
             </form>
         </div>
