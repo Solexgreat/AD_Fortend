@@ -18,7 +18,10 @@ export const RadioOption = ({ value, checked, onChange, children }) => {
   // Also, make sure to pass the correct checked prop to the input element
   return (
     <div className="RadioOption">
-      <input id={value} type="radio" name={value} checked={checked} onChange={e=>{onChange(e.target.value)}} />
+      <input id={value} 
+      type="radio" name={value} 
+      checked={checked} value={value}
+      onChange={e=>{onChange(e.target.value)}} />
       <label htmlFor={value}>{children}</label>
     </div>
   );
