@@ -4,11 +4,11 @@ import "./styles.css";
 export const RadioGroup = ({ onChange, selected, children }) => {
   // Use React.Children.map and React.cloneElement to clone the children
 
-  //const RadioOptions = React.Children.map(children, (child, index) => {
-  //    return React.cloneElement(child, {checked: child.props.value === selected, onChange })
-  //  })
+  const RadioOptions = React.Children.map(children, (child, index) => {
+      return React.cloneElement(child, {checked: child.props.value === selected, onChange })
+   })
   // and pass the correct props to each RadioOption
-  const RadioOptions = null;
+
 
   return <div className="RadioGroup">{RadioOptions}</div>;
 };

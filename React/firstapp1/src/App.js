@@ -1,7 +1,9 @@
 /**import logo from './logo.svg';*/
+import { useEffect } from 'react';
 import './App.css';
 import './index.css';
 /**import {useState} from "react"*
+import { useContext } from 'react';
 
 **REGISTRATION Form***
 const PasswordErrorMessage = () => {
@@ -213,5 +215,46 @@ function App() {
     </div>
   );
 }*/
+
+//Toggle ON and OFF
+
+const ToggleContext = React.createContext();
+
+
+function Toggle(props) {
+  const[on, setOn] = React.useState(false);
+  const toggle = React.useCallback(() => setOn(on=> !on), []);
+  React.useEffect(()=> {props.onToggle(on)}, [on]);
+
+  const value = React.useMemo(() => {on, toggle}, [on])
+
+  return(
+    <ToggleContext.Provider value={value}>{children}
+    </ToggleContext.Provider>
+  )
+
+function useToggleContext (){
+  const context = React.useContext(ToggleContext)
+  if (!context){
+    throw new Error (
+      
+    )
+  }
+}
+
+  
+  
+}
+
+
+function App() {
+  return (
+    <Toggle onToggle={on=> console.log(on)}>
+      <ToggleOn>The button is on</ToggleOn>
+      <ToggleOff>The button is off</ToggleOff>
+      <ToggleButton />
+    </Toggle>
+  )
+}
 
 export default App;
