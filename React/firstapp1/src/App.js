@@ -1,5 +1,6 @@
 /**import logo from './logo.svg';*/
-import { useEffect } from 'react';
+import * as React from 'react';
+import {Switch} from '../switch';
 import './App.css';
 import './index.css';
 /**import {useState} from "react"*
@@ -232,20 +233,33 @@ function Toggle(props) {
     <ToggleContext.Provider value={value}>{children}
     </ToggleContext.Provider>
   )
-
+  }
 function useToggleContext (){
   const context = React.useContext(ToggleContext)
   if (!context){
     throw new Error (
-      
+      `Toggle compound components cannot be rendered outside the Toggle component`
     )
   }
+  return context
 }
 
-  
-  
+function ToggleOn({children}) {
+  const {on} = useToggleContext();
+  return on ? children : null 
 }
 
+function ToggleOff({children}) {
+  const {on} = useToggleContext();
+  return on ? null : children;
+}
+
+function ToggleButton(props) {
+  const {on, toggle} = useToggleContext();
+  return(
+    <switch on={on} onClick={toggle} {...props}/>
+  )
+}
 
 function App() {
   return (
