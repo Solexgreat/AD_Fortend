@@ -24,7 +24,7 @@ const MousePosition = ({ render }) => {
 };
 
 // This component should not receive any props
-const PanelMouseLogger = ({mousePosition}) => {
+const PanelMouseLogger = () => {
   // The below if statement can be removed after the render props pattern is implemented
   if (!mousePosition) {
     return null;
