@@ -41,11 +41,13 @@ const PanelMouseLogger = () => {
 };
 
 // This component should not receive any props
-const PointMouseLogger = ({mousePosition}) => {
+const PointMouseLogger = () => {
   return (
-    <p>
-      ({mousePosition.x}, {mousePosition.y})
-    </p>
+    <MousePosition render={({mousePosition}) => (
+        <p>
+            ({mousePosition.x}, {mousePosition.y})
+        </p>
+    )}/>
   )
 };
 
