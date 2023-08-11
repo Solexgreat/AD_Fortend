@@ -1,4 +1,4 @@
-.App {
+/**.App {
   display: flex;
   flex: 1;
   height: 100vh;
@@ -6,7 +6,7 @@
   align-items: center;
 }
 
-fieldset {
+/**fieldset {
   display: flex;
   width: 480px;
   padding: 16px;
@@ -75,7 +75,7 @@ button[disabled] {
   background-color: #cccccc;
   color: #666666;
   cursor: not-allowed;
-}
+}*/
 
 
 /**.App {
@@ -115,9 +115,10 @@ button[disabled] {
   to {
     transform: rotate(360deg);
   }
-}
-//CONTROL FORM
+}*/
+
 .feedback {
+  display: flex;
   width: 30em;
   padding: 10px;
   margin: 15px;
@@ -137,4 +138,4 @@ button[disabled] {
 .field_btn {
   padding-left: 15em;
   padding-right: 15em;
-}*/
+}

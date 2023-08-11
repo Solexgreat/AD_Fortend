@@ -1,6 +1,6 @@
 /**import logo from './logo.svg';*/
 import * as React from 'react';
-import {Switch} from '../switch';
+//import {Switch} from '../switch';
 import './App.css';
 import './index.css';
 /**import {useState} from "react"*
@@ -219,7 +219,7 @@ function App() {
 
 //Toggle ON and OFF
 
-const ToggleContext = React.createContext();
+/*const ToggleContext = React.createContext();
 
 
 function Toggle(props) {
@@ -268,6 +268,67 @@ function App() {
       <ToggleOff>The button is off</ToggleOff>
       <ToggleButton />
     </Toggle>
+  )
+}*/
+
+
+const Feedback = () => {
+  const [score, setScore] = React.useState(10);
+  const [comment, setComment ]  = React.useState("")
+
+  const isDisabled = score < 5 && comment.length <= 10;
+  const textAreaPlaceholder = isDisabled ? "Please comment why the service is Bad!" : "optional comment"
+
+  const handleScore = (e) => {
+    setScore(e.target.value);
+  }
+
+  const handleSubmit = (e) =>{
+    e.preventDefault()
+    if(score < 5 && comment.length <= 10) {
+      alert("Please comment why the service is Bad!");
+      return;
+    }
+
+    return resetForm()
+  }
+
+  const resetForm = () =>{
+    setScore(10);
+    setComment('')
+  }
+
+  return (
+    <div className="feedback">
+      <form onSubmit={handleSubmit}>
+        <fieldset>
+          <h1>Feedback Form</h1>
+          <div className="Field">
+          <label>Score: {score} </label> <br/>
+          <input type='Range'
+           name="Score" 
+           min="0" 
+           max="10"
+           value={score}
+           onChange={handleScore}/>
+           </div>
+           <div className="Field">
+          <label>Comment: </label> <br/>
+          <textarea placeholder={}
+          value={comment}
+          onChange={(e) => {setComment(e.target.comment)}}  />
+          </div>
+          <button type='submit' className='field_btn' >Submit</button>
+        </fieldset>
+      </form>
+    </div>
+  )
+}
+
+function App() {
+
+  return(
+      <Feedback />
   )
 }
 
