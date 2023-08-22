@@ -1,4 +1,5 @@
 import {Box, HStack, ChakraProvider} from "@chakra-ui/react";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 //import theme from "./theme";
 
 function Header() {
@@ -15,11 +16,14 @@ function Header() {
         transitionTimingFunction="ease-in-out"
         backgroundColor="#18181b" 
         >
-          <Box color='blue' maxW="1280px" m="0 auto">
+          <Box color='white' maxW="1280px" m="0 auto">
             <HStack
             px={16}
             py={4}
+            justifyContent="space-between"
+            alignItems="center"
             >
+              <nav></nav>
               sbshbhscbsd
             </HStack>
           </Box>
