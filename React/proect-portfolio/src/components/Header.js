@@ -1,8 +1,21 @@
 import {Box, HStack, ChakraProvider} from "@chakra-ui/react";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+//import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import {
+  faGithub,
+  faLinkedin,
+  faMedium,
+  faStackOverflow,
+} from "@fortawesome/free-brands-svg-icons";
 //import theme from "./theme";
 
 function Header() {
+
+  const socials =[
+    {
+      icon: faGithub,
+      url: "https://github.com",
+    }
+  ]
     return(
       <ChakraProvider >
         <Box 
@@ -23,7 +36,9 @@ function Header() {
             justifyContent="space-between"
             alignItems="center"
             >
-              <nav></nav>
+              <nav>
+                {socials[0]}
+              </nav>
               sbshbhscbsd
             </HStack>
           </Box>
