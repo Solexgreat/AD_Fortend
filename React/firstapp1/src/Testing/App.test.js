@@ -1,5 +1,13 @@
-import { fireEvent, render, screen } from "@testing-library/react";
-import FeedbackForm from "./FeedbackForm";
+ import { fireEvent, render, screen } from "@testing-library/react"; 
+ import FeedbackForm from "./FeedbackForm";
+//  import fetch from "./App"
+
+//  describe("fetch", () => {
+//   test('loads and displays greeting', () => {
+    
+//   })
+//  })
+
 
 describe("Feedback Form", () => {
   test("User is able to submit the form if the score is lower than 5 and additional feedback is provided", () => {
@@ -8,13 +16,13 @@ describe("Feedback Form", () => {
     const handleSubmit = jest.fn();
     render(<FeedbackForm onSubmit={handleSubmit} />);
     
-    const rangeInput = screen.getByLabelText(/Score:/);
-    fireEvent.change(rangeInput, { target: { value: score } });
+    const scoreInput = screen.getByLabelText(/Score:/);
+    fireEvent.change(scoreInput, { target: { value: score } });
 
-        const rangeInput = screen.getByLabelText(/Comment:/);
-    fireEvent.change(rangeInput, { target: { value: comment } })
+    const commentInput = screen.getByLabelText(/Comments:/);
+    fireEvent.change(commentInput, { target: { value: comment } })
 
-    const submitButton = screen.getByRole(button);
+    const submitButton = screen.getByRole("button");
     fireEvent.click(submitButton);
 
     // You have to write the rest of the test below to make the assertion pass
@@ -23,7 +31,7 @@ describe("Feedback Form", () => {
       score,
       comment,
     });
-    expect(submitButton).not.toHaveBeenCalledWith
+    expect(submitButton).not.toHaveAttribute("disabled")
   });
 
   test("User is able to submit the form if the score is higher than 5, without additional feedback", () => {
@@ -32,13 +40,13 @@ describe("Feedback Form", () => {
     render(<FeedbackForm onSubmit={handleSubmit} />);
 
     const rangeInput = screen.getByLabelText(/Score:/);
-    fireEvent.change(rangeInput, { target: { value: "6" } })
+    fireEvent.change(rangeInput, { target: { value: score } })
 
     // You have to write the rest of the test below to make the assertion pass
 
     expect(handleSubmit).toHaveBeenCalledWith({
       score,
       comment: "",
-    });
+      });
   });
 });
