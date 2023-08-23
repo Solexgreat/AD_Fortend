@@ -59,9 +59,17 @@ function Header() {
                   <FontAwesomeIcon icon={socials[0].icon} size="2x" />
                 </a>
                 <a href={socials[1].url}>
-                  <FontAwesomeIcon icon={soicals[1].icon}  size="2x"/>
+                  <FontAwesomeIcon icon={socials[1].icon}  size="2x"/>
                 </a>
-                <a href></a>
+                <a href={socials[2].url}>
+                  <FontAwesomeIcon icon={socials[2].icon} size="2x"/>
+                </a>
+                <a href={socials[3].url}>
+                  <FontAwesomeIcon icon={socials[3].icon} size="2x"/>
+                </a>
+                <a href={socials[4].url}>
+                  <FontAwesomeIcon icon={socials[4].icon} size="2x"/>
+                </a>
               </nav>
               sbshbhscbsd
             </HStack>
