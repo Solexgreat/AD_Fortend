@@ -49,6 +49,7 @@ function Header() {
         >
           <Box color='white' maxW="1280px" m="0 auto">
             <HStack
+            spacing="5px"
             px={16}
             py={4}
             justifyContent="space-between"
@@ -58,23 +59,15 @@ function Header() {
                 <a href={socials[0].url }>
                   <FontAwesomeIcon icon={socials[0].icon} size="2x" />
                 </a>
-              </nav>
-              <nav>
                 <a href={socials[1].url}>
                   <FontAwesomeIcon icon={socials[1].icon}  size="2x"/>
                 </a>
-              </nav>
-              <nav>
                 <a href={socials[2].url}>
                   <FontAwesomeIcon icon={socials[2].icon} size="2x"/>
                 </a>
-              </nav>
-              <nav>
                 <a href={socials[3].url}>
                   <FontAwesomeIcon icon={socials[3].icon} size="2x"/>
-                </a>
-              </nav>
-              <nav>  
+                </a> 
                 <a href={socials[4].url}>
                   <FontAwesomeIcon icon={socials[4].icon} size="2x"/>
                 </a>
