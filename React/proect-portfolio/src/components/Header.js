@@ -1,10 +1,12 @@
 import {Box, HStack, ChakraProvider} from "@chakra-ui/react";
-//import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faGithub,
   faLinkedin,
   faMedium,
   faStackOverflow,
+
 } from "@fortawesome/free-brands-svg-icons";
 //import theme from "./theme";
 
@@ -14,7 +16,23 @@ function Header() {
     {
       icon: faGithub,
       url: "https://github.com",
-    }
+    },
+    {
+      icon: faEnvelope,
+      url: "mailto: hello@example.com",
+    },
+    {
+      icon: faLinkedin,
+      url: "https://www.linkedin.com",
+    },
+    {
+      icon: faMedium,
+      url: "https://medium.com",
+    },
+    {
+      icon: faStackOverflow,
+      url: "https://stackoverflow.com",
+    },
   ]
     return(
       <ChakraProvider >
@@ -36,8 +54,14 @@ function Header() {
             justifyContent="space-between"
             alignItems="center"
             >
-              <nav>
-                {socials[0]}
+              <nav>           
+                <a href={socials[0].url }>
+                  <FontAwesomeIcon icon={socials[0].icon} size="2x" />
+                </a>
+                <a href={socials[1].url}>
+                  <FontAwesomeIcon icon={soicals[1].icon}  size="2x"/>
+                </a>
+                <a href></a>
               </nav>
               sbshbhscbsd
             </HStack>
