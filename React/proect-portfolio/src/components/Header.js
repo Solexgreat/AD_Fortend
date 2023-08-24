@@ -50,7 +50,7 @@ function Header() {
   return(
     <ChakraProvider >
       <Box
-      bg="darkblue">
+      backgroundColor="darkblue">
         <Box 
         pos="fixed"
         top={0}
