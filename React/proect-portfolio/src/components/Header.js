@@ -9,6 +9,7 @@ import {
 
 } from "@fortawesome/free-brands-svg-icons";
 //import theme from "./theme";
+import Contact from './../../../customizing-example/src/state/Nav/Contact';
 
 
 const socials =[
@@ -67,27 +68,29 @@ function Header() {
           justifyContent="space-between"
           alignItems="center"
           >
-            <nav>         
-              <a href={socials[0].url }>
-                <FontAwesomeIcon icon={socials[0].icon} size="2x" />
-              </a>
-              <a href={socials[1].url}>
-                <FontAwesomeIcon icon={socials[1].icon}  size="2x"/>
-              </a>
-              <a href={socials[2].url}>
-                <FontAwesomeIcon icon={socials[2].icon} size="2x"/>
-              </a>
-              <a href={socials[3].url}>
-                <FontAwesomeIcon icon={socials[3].icon} size="2x"/>
-              </a> 
-              <a href={socials[4].url}>
-                <FontAwesomeIcon icon={socials[4].icon} size="2x"/>
-              </a>
+            <nav>
+              <HStack spacing={10}>
+                <a href={socials[0].url }>
+                  <FontAwesomeIcon icon={socials[0].icon} size="2x" />
+                </a>
+                <a href={socials[1].url}>
+                  <FontAwesomeIcon icon={socials[1].icon}  size="2x"/>
+                </a>
+                <a href={socials[2].url}>
+                  <FontAwesomeIcon icon={socials[2].icon} size="2x"/>
+                </a>
+                <a href={socials[3].url}>
+                  <FontAwesomeIcon icon={socials[3].icon} size="2x"/>
+                </a> 
+                <a href={socials[4].url}>
+                  <FontAwesomeIcon icon={socials[4].icon} size="2x"/>
+                </a>  
+              </HStack>       
             </nav>
             <nav>
               <HStack spacing={10}>
-                <a href='/ContactMeSection'>Contact Me</a>
-                <a href="/Projects">Projects</a>
+                <a href='/ContactMeSection' onClick={handleclick('contactme')}>Contact Me</a>
+                <a href="/ProjectsSection" onClick={handleclick('projects')}>Projects</a>
 
               </HStack>
             </nav>
