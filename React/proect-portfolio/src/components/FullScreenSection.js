@@ -4,7 +4,7 @@ import { VStack } from '@chakra-ui/react';
 const FullScreenSection = ({children, isDarkBackground, ...props}) =>{
     return(
         <VStack
-        backgroundColor={...props.backgroundColor}
+        backgroundColor={props.backgroundColor}
         color={isDarkBackground ? 'white' : 'black'}>
             <VStack maxW="1280" minH="100vh">
                 {children}
