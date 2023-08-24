@@ -9,7 +9,7 @@ import {
 
 } from "@fortawesome/free-brands-svg-icons";
 //import theme from "./theme";
-import Contact from './../../../customizing-example/src/state/Nav/Contact';
+
 
 
 const socials =[
@@ -60,7 +60,7 @@ function Header() {
       transitionTimingFunction="ease-in-out"
       backgroundColor="#18181b" 
       >
-        <Box color='white' maxW="1280px" m="0 auto">
+        <Box color='dark-blue' maxW="1280px" m="0 auto">
           <HStack
           spacing="16px"
           px={16}
