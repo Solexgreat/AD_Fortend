@@ -12,11 +12,15 @@ const LandingSection =() => {
     return(
         <FullScreenSection
         justifycontent="center"
+        alignItems="center"
         backgroundColor="#2A4365">
-            <VStack>
-                <Avatar src="https://i.pravatar.cc/150?img=7"/>
-                <Heading>{greeting}</Heading>
-                <Heading>{bio1}</Heading>
+            <VStack
+            py="20vh">
+                <Avatar  src="https://i.pravatar.cc/150?img=7"/>
+                <Heading as="h1" size="md" color="white" >
+                    {greeting}
+                </Heading>
+                <Heading as='h1' size='4xl'>{bio1}</Heading>
                 <Heading>{bio2}</Heading>
             </VStack>
 
