@@ -15,13 +15,14 @@ const LandingSection =() => {
         alignItems="center"
         backgroundColor="#2A4365">
             <VStack
-            py="20vh">
-                <Avatar  src="https://i.pravatar.cc/150?img=7"/>
-                <Heading as="h1" size="md" color="white" >
+            py="20vh"
+            >
+                <Avatar size='2xl' src="https://i.pravatar.cc/150?img=7"/>
+                <Heading as='h6' size="xs" color="white"  pb="10">
                     {greeting}
                 </Heading>
-                <Heading as='h1' size='4xl'>{bio1}</Heading>
-                <Heading>{bio2}</Heading>
+                <Heading as="h1" color="white" size="xl">{bio1}</Heading>
+                <Heading as="h1" color="white" size="xl">{bio2}</Heading>
             </VStack>
 
         </FullScreenSection>
