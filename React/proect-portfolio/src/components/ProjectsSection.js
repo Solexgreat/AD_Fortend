@@ -1,6 +1,8 @@
 import React from "react";
 import FullScreenSection from "./FullScreenSection";
 import { Box, Heading } from "@chakra-ui/react";
+import Card from "./Card.js"
+
 
 
 const projects = [
@@ -44,9 +46,16 @@ const ProectsSection =() =>{
                 Featured Projets
             </Heading>
             <Box>
-              
+              <Card
+              key={projects.title}
+              title={projects.title}
+              description={projects.description}
+              imageSrc={projects.getImageSrc()}
+              ></Card>
             </Box>
 
         </FullScreenSection>
     )
 }
+
+export default ProectsSection;
