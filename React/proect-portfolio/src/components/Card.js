@@ -12,8 +12,9 @@ const Card = ({title, description, imageSrc}) =>{
             <Image src={imageSrc} alt={title}/>
             <Box
             p={6}
-            backgroundColor="white">
-                <Text>
+            backgroundColor="white"
+            borderRadius={4}>
+                <Text color="black">
                     {title}
                 </Text>
                 <Text>
