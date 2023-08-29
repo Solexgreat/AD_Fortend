@@ -7,10 +7,11 @@ import { Box, Text, Image } from "@chakra-ui/react";
 const Card = ({title, description, imageSrc}) =>{
 
     return(
-        <Box>
+        <Box
+        boxSize="sm">
             <Image src={imageSrc} alt={title}/>
             <Box
-            boxsize="sm">
+            >
                 <Text>
                     {title}
                 </Text>
@@ -19,6 +20,7 @@ const Card = ({title, description, imageSrc}) =>{
                 </Text>
             </Box>
         </Box>
+
     )
 }
 

@@ -45,7 +45,8 @@ const ProectsSection =() =>{
             <Heading as="h1" id="projects-section">
                 Featured Projets
             </Heading>
-            <Box>
+            <Box
+            display="grid">
               {projects.map((project) =>
               <Card
               key={project.title}
