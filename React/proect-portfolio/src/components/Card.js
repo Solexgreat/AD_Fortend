@@ -17,7 +17,7 @@ const Card = ({title, description, imageSrc}) =>{
                 <Text color="black" fontWeight="semibold">
                     {title}
                 </Text>
-                <Text color="black" fontWeight="semibold">
+                <Text color="blue.50"  mt={5}>
                     {description}
                 </Text>
             </Box>

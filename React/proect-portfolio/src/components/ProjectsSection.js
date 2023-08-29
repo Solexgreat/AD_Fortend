@@ -38,7 +38,7 @@ const ProectsSection =() =>{
     return(
         <FullScreenSection
         backgroundColor="#14532d"
-        isDarkBackground={false}
+        isDarkBackground
         alignItems="flex-start"
         p={8}
         spacing={8}>

@@ -13,6 +13,7 @@ const LandingSection =() => {
         <FullScreenSection
         justifycontent="center"
         alignItems="center"
+        isDarkBackground={false}
         backgroundColor="#2A4365">
             <VStack
             py="20vh"
