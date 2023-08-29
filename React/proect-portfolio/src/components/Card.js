@@ -11,7 +11,8 @@ const Card = ({title, description, imageSrc}) =>{
         boxSize="sm">
             <Image src={imageSrc} alt={title}/>
             <Box
-            >
+            p={6}
+            backgroundColor="white">
                 <Text>
                     {title}
                 </Text>
