@@ -46,7 +46,8 @@ const ProectsSection =() =>{
                 Featured Projets
             </Heading>
             <Box
-            display="grid">
+            display="grid"
+            gridtemplateColumns="repeat(2, 1fr)">
               {projects.map((project) =>
               <Card
               key={project.title}
