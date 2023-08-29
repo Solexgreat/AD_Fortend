@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Text, Image } from "@chakra-ui/react";
+import { Box, Text, Image, Link } from "@chakra-ui/react";
 //import Card from './../../../customizing-example/src/card';
 
 
@@ -8,18 +8,25 @@ const Card = ({title, description, imageSrc}) =>{
 
     return(
         <Box
-        boxSize="sm">
+        maxW="sm"
+        backgroundColor="white"
+        borderRadius="lg"
+        borderWidth="2px"
+        overflow="hidden"
+        boxShadow="md">
             <Image src={imageSrc} alt={title}/>
             <Box
             p={6}
-            backgroundColor="white"
-            borderRadius={8}>
+            >
                 <Text color="black" fontWeight="semibold">
                     {title}
                 </Text>
-                <Text color="blue.100"  mt={5} fontSize={4}>
+                <Text color="gray.500"  mt={5} fontSize={14} >
                     {description}
                 </Text>
+                <Link color="black" fontWeight="semibold" mt={5}>
+                    See More ->>
+                </Link>
             </Box>
         </Box>
 
