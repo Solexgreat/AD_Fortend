@@ -13,11 +13,11 @@ const Card = ({title, description, imageSrc}) =>{
             <Box
             p={6}
             backgroundColor="white"
-            borderRadius={4}>
-                <Text color="black">
+            borderRadius={8}>
+                <Text color="black" fontWeight="semibold">
                     {title}
                 </Text>
-                <Text>
+                <Text color="black" fontWeight="semibold">
                     {description}
                 </Text>
             </Box>
