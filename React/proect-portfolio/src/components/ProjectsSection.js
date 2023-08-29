@@ -38,9 +38,9 @@ const ProectsSection =() =>{
     return(
         <FullScreenSection
         backgroundColor="#14532d"
-        isDarkBackground
-        p={8}
+        isDarkBackground={false}
         alignItems="flex-start"
+        p={8}
         spacing={8}>
             <Heading as="h1" id="projects-section">
                 Featured Projets
