@@ -38,7 +38,7 @@ const ProectsSection =() =>{
     return(
         <FullScreenSection
         backgroundColor="#14532d"
-        isDarkBackground={false}
+        isDarkBackground
         p={8}
         alignItems="flex-start"
         spacing={8}>
@@ -46,12 +46,15 @@ const ProectsSection =() =>{
                 Featured Projets
             </Heading>
             <Box>
+              {projects.map((project) =>
               <Card
-              key={projects.title}
-              title={projects.title}
-              description={projects.description}
-              imageSrc={projects.getImageSrc()}
-              ></Card>
+              key={project.title}
+              title={project.title}
+              description={project.description}
+              imageSrc={project.getImageSrc()}
+              />
+              )}
+              
             </Box>
 
         </FullScreenSection>
