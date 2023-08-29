@@ -9,7 +9,8 @@ const Card = ({title, description, imageSrc}) =>{
     return(
         <Box>
             <Image src={imageSrc} alt={title}/>
-            <Box>
+            <Box
+            boxsize="sm">
                 <Text>
                     {title}
                 </Text>
