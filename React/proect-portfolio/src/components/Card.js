@@ -24,8 +24,8 @@ const Card = ({title, description, imageSrc}) =>{
                 <Text color="gray.500"  mt={5} fontSize={14} >
                     {description}
                 </Text>
-                <Link color="black" fontWeight="semibold" mt={5}>
-                    See More ->>
+                <Link color="blue.500"  mt="2">
+                    See More ->
                 </Link>
             </Box>
         </Box>
