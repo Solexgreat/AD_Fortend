@@ -29,7 +29,10 @@ const ContactMeSection = () => {
                                     <FormLabel>
                                         Email Address
                                     </FormLabel>
-                                    <Input/>
+                                    <Input
+                                    id="email"
+                                    name="email"
+                                    type="email" />
                                     <FormErrorMessage></FormErrorMessage>
                             </FormControl>
                             <FormControl>
