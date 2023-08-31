@@ -16,7 +16,7 @@ const ContactMeSection = () => {
                 <Heading>
                     Contact Me
                 </Heading>
-                <Box w="100%" >
+                <Box w="100%" rounded="md">
                     <form>
                         <VStack>
                             <FormControl>
