@@ -12,11 +12,11 @@ const ContactMeSection = () => {
         backgroundColor="#512DA8"
         py={16}
         spacing={8}>
-            <VStack width="1024px">
+            <VStack w="1024px" p={32} alignItems="flex-start">
                 <Heading>
                     Contact Me
                 </Heading>
-                <Box>
+                <Box w="100%" >
                     <form>
                         <VStack>
                             <FormControl>
