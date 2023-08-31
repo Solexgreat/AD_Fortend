@@ -2,7 +2,7 @@ import { useState, createContext, useContext } from "react";
 
 const AlertContext = createContext(undefined);
 
-const AlertProvide = () =>{
+const AlertProvide = ({children}) =>{
     const [state, setState] = useState({
         isOpen: false,
         type: "success",
@@ -13,8 +13,12 @@ const AlertProvide = () =>{
         <AlertContext.Provider
         value={{
             ...state,
-            onOpen: (type, message) => {setState({isOpen: true, type, message})}
-            onClose
-        }} ></AlertContext.Provider>
+            onOpen: (type, message) => {setState({isOpen: true, type, message})},
+            onClose: () => setState({isOpen: true, type: " ", message: " ",})
+        }} >
+            {children}
+        </AlertContext.Provider>
     )
 }
+
+export const useAlertContext = () => useContext(AlertContext);
