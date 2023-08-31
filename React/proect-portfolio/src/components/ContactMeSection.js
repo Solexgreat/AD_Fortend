@@ -11,8 +11,8 @@ const ContactMeSection = () => {
         isDarkBackground
         backgroundColor="#512DA8"
         py={16}
-        >
-            <VStack>
+        spacing={8}>
+            <VStack width="1024px">
                 <Heading>
                     Contact Me
                 </Heading>
