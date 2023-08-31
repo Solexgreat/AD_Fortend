@@ -1,6 +1,7 @@
 import React from "react";
-import { Box, Text, Image, Link } from "@chakra-ui/react";
-//import Card from './../../../customizing-example/src/card';
+import { Box, Text, Image } from "@chakra-ui/react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 
 
@@ -17,16 +18,18 @@ const Card = ({title, description, imageSrc}) =>{
             <Image src={imageSrc} alt={title}/>
             <Box
             p={6}
+            pb={0}
             >
                 <Text color="black" fontWeight="semibold">
                     {title}
                 </Text>
-                <Text color="gray.500"  mt={5} fontSize={14} >
+                <Text color="gray.500"  mt={5} mb={20} fontSize={14} >
                     {description}
                 </Text>
-                <Link color="blue.500"  mt="2">
-                    See More ->
-                </Link>
+                <Text color="black" fontWeight="semibold">
+                    See more <FontAwesomeIcon icon={faArrowRight} size="1x"  color="black"/>
+                </Text>
+
             </Box>
         </Box>
 
