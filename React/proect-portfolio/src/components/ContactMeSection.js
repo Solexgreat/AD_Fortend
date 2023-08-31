@@ -16,9 +16,9 @@ const ContactMeSection = () => {
                 <Heading>
                     Contact Me
                 </Heading>
-                <Box w="100%" rounded="md">
+                <Box w="100%" rounded="md" p={6}>
                     <form>
-                        <VStack>
+                        <VStack spacing={4}>
                             <FormControl>
                                     <FormLabel htmlFor="firstName">
                                         Name
