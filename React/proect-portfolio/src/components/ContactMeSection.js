@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, FormControl, FormLabel, Heading, Textarea, VStack } from "@chakra-ui/react";
+import { Box, FormControl, FormLabel, Heading, Textarea, VStack, FormErrorMessage } from "@chakra-ui/react";
 import FullScreenSection from "./FullScreenSection";
 
 
@@ -17,10 +17,12 @@ const ContactMeSection = () => {
                     <form>
                         <VStack>
                             <FormControl>
-                                    <FormLabel htmlFor="firstname">
+                                    <FormLabel htmlFor="firstName">
                                         Name
                                     </FormLabel>
-                                    <Input/>
+                                    <Input
+                                    id="firstName"
+                                    name="firstName" />
                                     <FormErrorMessage></FormErrorMessage>
                             </FormControl>
                             <FormControl>
