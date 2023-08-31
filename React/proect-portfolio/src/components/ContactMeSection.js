@@ -26,7 +26,7 @@ const ContactMeSection = () => {
                                     <FormErrorMessage></FormErrorMessage>
                             </FormControl>
                             <FormControl>
-                                    <FormLabel>
+                                    <FormLabel htmlFor="email">
                                         Email Address
                                     </FormLabel>
                                     <Input
@@ -36,10 +36,10 @@ const ContactMeSection = () => {
                                     <FormErrorMessage></FormErrorMessage>
                             </FormControl>
                             <FormControl>
-                                    <FormLabel>
+                                    <FormLabel htmlFor="type">
                                         Type of enquiry
                                     </FormLabel>
-                                    <Select>
+                                    <Select id="type" name="type">
                                         <option value="hireMe">Freelance project proposal</option>
                                         <option value="openSource">
                                             Open source consultancy session
@@ -49,10 +49,12 @@ const ContactMeSection = () => {
                                     <FormErrorMessage></FormErrorMessage>
                             </FormControl>
                             <FormControl>
-                                <FormLabel>
+                                <FormLabel htmlFor="comment">
                                     Your message
                                 </FormLabel>
-                                <Textarea 
+                                <Textarea
+                                id="comment"
+                                name="comment"
                                 height={250}/>
                             </FormControl>
                         </VStack>
@@ -63,3 +65,5 @@ const ContactMeSection = () => {
         </FullScreenSection>
     )
 }
+
+export default ContactMeSection;
