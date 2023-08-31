@@ -1,5 +1,6 @@
 import React from "react";
-import { Box, FormControl, FormLabel, Heading, Textarea, VStack, FormErrorMessage } from "@chakra-ui/react";
+import { Box, FormControl, FormLabel, Heading, 
+    Textarea, VStack, FormErrorMessage, Input, Select } from "@chakra-ui/react";
 import FullScreenSection from "./FullScreenSection";
 
 
@@ -7,8 +8,10 @@ import FullScreenSection from "./FullScreenSection";
 const ContactMeSection = () => {
     return (
         <FullScreenSection
-        backgroundColor='purple'
-        alignItems="flex-start">
+        isDarkBackground
+        backgroundColor="#512DA8"
+        py={16}
+        >
             <VStack>
                 <Heading>
                     Contact Me
