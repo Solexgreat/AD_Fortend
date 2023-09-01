@@ -12,9 +12,14 @@ const useSubmit = () =>{
         try{
             await wait(2000);
             if (random < 0.5) {
-                throw new error('')
+                throw new error('Not responding')
             }
-
+            setResponse({
+                type: true,
+                message: 'success'
+            })
+        } catch(err){
+            console.log(err)
         }
     }
 }
