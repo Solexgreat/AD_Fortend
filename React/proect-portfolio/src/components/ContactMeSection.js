@@ -2,11 +2,29 @@ import React from "react";
 import { Box, FormControl, FormLabel, Heading, 
     Textarea, VStack, FormErrorMessage, Input, Select } from "@chakra-ui/react";
 import { useAlertContext } from "../context/alertContext";
+import * as Yup from 'yup';
+import { useFormik } from 'formik';
 import FullScreenSection from "./FullScreenSection";
 
 
 
 const ContactMeSection = () => {
+    const formik = useFormik({
+        intialValues: {
+            firstName: '',
+            email:'',
+            type: '',
+            comment: '',
+        },
+        onSubmit: (values) => { submit(values) },
+    
+        validationSchema: Yup.object({
+            firstName: Yup.string().required("Required"),
+            email: Yup.string().required("Required").email("Invalid email address"),
+            type: Yup.string().optional(),
+            comment: Yup.string().min(25).required("Required")
+    })
+    })
     return (
         <FullScreenSection
         isDarkBackground
