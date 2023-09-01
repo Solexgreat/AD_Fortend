@@ -15,11 +15,21 @@ const useSubmit = () =>{
                 throw new error('Not responding')
             }
             setResponse({
-                type: true,
-                message: 'success'
+                type: 'success',
+                message:`Thanks for the submission ${data.firstName} we will get back to you shortly!`
             })
         } catch(err){
-            console.log(err)
+            setResponse({
+                type: 'error',
+                message:`somethin went wrong due to ${err} try again`,
+            })
+        } finally{
+            setLoading(false);
         }
     }
+    return(
+        {isLoading, Response, submit}
+    );
 }
+
+export default useSubmit;
