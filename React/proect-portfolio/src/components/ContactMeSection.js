@@ -40,24 +40,33 @@ const ContactMeSection = () => {
                 <Box w="100%" rounded="md" p={6}>
                     <form>
                         <VStack spacing={4}>
-                            <FormControl>
+                            <FormControl isInvalid={formik.errors.firstName && formik.touched.firstName}>
                                     <FormLabel htmlFor="firstName">
                                         Name
                                     </FormLabel>
                                     <Input
                                     id="firstName"
-                                    name="firstName" />
-                                    <FormErrorMessage></FormErrorMessage>
+                                    name="firstName"
+                                    value={formik.values.firstName}
+                                    {...formik.getFieldProps("firstName")} />
+                                    <FormErrorMessage>
+                                        {formik.errors.firstName && formik.touched.firstName}
+                                    </FormErrorMessage>
                             </FormControl>
-                            <FormControl>
+                            <FormControl isInvalid={formik.errors.email && formik.touched.email}>
                                     <FormLabel htmlFor="email">
                                         Email Address
                                     </FormLabel>
                                     <Input
+                                    {...formik.getFieldProps("email")}
                                     id="email"
                                     name="email"
-                                    type="email" />
-                                    <FormErrorMessage></FormErrorMessage>
+                                    type="email"
+                                    value={formik.values.email}
+                                     />
+                                    <FormErrorMessage>
+                                        {formik.errors.email && formik.touched.email}
+                                    </FormErrorMessage>
                             </FormControl>
                             <FormControl>
                                     <FormLabel htmlFor="type">
@@ -70,16 +79,21 @@ const ContactMeSection = () => {
                                         </option>
                                         <option value="other">Other</option>
                                     </Select>
-                                    <FormErrorMessage></FormErrorMessage>
                             </FormControl>
-                            <FormControl>
+                            <FormControl isInvalid={formik.errors.comment && formik.touched.comment}>
                                 <FormLabel htmlFor="comment">
                                     Your message
                                 </FormLabel>
                                 <Textarea
+                                {...formik.getFieldProps("comment")}
                                 id="comment"
                                 name="comment"
-                                height={250}/>
+                                height={250}
+                                value={formik.values.comment}
+                                />
+                                <FormErrorMessage>
+                                    {formik.errors.comment && formik.touched.comment}
+                                </FormErrorMessage>
                             </FormControl>
                         </VStack>
                     </form>
