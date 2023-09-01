@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-
+const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 const useSubmit = () =>{
     const[isLoading, setLoading] = useState(false);
@@ -12,7 +12,7 @@ const useSubmit = () =>{
         try{
             await wait(2000);
             if (random < 0.5) {
-                throw new error('Not responding')
+                throw new Error('Not responding')
             }
             setResponse({
                 type: 'success',
