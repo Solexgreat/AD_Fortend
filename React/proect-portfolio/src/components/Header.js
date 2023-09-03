@@ -59,10 +59,14 @@ function Header() {
       } else {
         scrollDirection.current = 'up'
       }
+      lastScrollPosition = currentScrollPostion
     }
     window.addEventListener('scroll', handleScroll);
-    window.removeEventListener('scroll', handleScroll)
-  }
+    return () =>{
+      window.removeEventListener('scroll', handleScroll)
+    }
+  },
+  []
   )
 
   return(
@@ -76,6 +80,7 @@ function Header() {
       transitionProperty="transform"
       transitionDuration=".3s"
       transitionTimingFunction="ease-in-out"
+      transform={scrollDirection.current === 'down' ? 'translateY(-200px)' : 'translateY(0)'}
       backgroundColor="#18181b" 
       >
         <Box color='white' maxW="1280px" m="0 auto">
