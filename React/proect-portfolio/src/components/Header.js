@@ -8,6 +8,7 @@ import {
   faStackOverflow,
 
 } from "@fortawesome/free-brands-svg-icons";
+import { useEffect, useRef } from "react";
 //import theme from "./theme";
 
 
@@ -46,6 +47,19 @@ function Header() {
       })
     }
   }
+
+  const scrolling = useRef('up');
+
+  useEffect(() => {
+    let lastScrollPosition = window.scrollY;
+    const handleScroll = () =>{
+      const currentScrollPostion = window.scrollY;
+      if (currentScrollPostion > lastScrollPosition){
+        scrolling.current 
+      }
+    }
+  }
+  )
 
   return(
     <ChakraProvider >
