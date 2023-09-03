@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, FormControl, FormLabel, Heading, 
-    Textarea, VStack, FormErrorMessage, Input, Select } from "@chakra-ui/react";
+    Textarea, VStack, FormErrorMessage,
+     Input, Select, Button} from "@chakra-ui/react";
 import { useAlertContext } from "../context/alertContext";
 import * as Yup from 'yup';
 import { useFormik } from 'formik';
@@ -38,7 +39,7 @@ const ContactMeSection = () => {
                     Contact Me
                 </Heading>
                 <Box w="100%" rounded="md" p={6}>
-                    <form>
+                    <form onSubmit={formik.handleSubmit}>
                         <VStack spacing={4}>
                             <FormControl isInvalid={formik.errors.firstName && formik.touched.firstName}>
                                     <FormLabel htmlFor="firstName">
@@ -95,6 +96,15 @@ const ContactMeSection = () => {
                                     {formik.errors.comment && formik.touched.comment}
                                 </FormErrorMessage>
                             </FormControl>
+                            <Button
+                            type="submit"
+                            colorScheme="purple"
+                            width="full"
+                            isLoading={isLoading}
+                            loadingText='Submitting'
+                            >
+                                Submit
+                            </Button>
                         </VStack>
                     </form>
                 </Box>    
