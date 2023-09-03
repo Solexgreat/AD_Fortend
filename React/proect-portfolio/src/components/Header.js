@@ -48,16 +48,20 @@ function Header() {
     }
   }
 
-  const scrolling = useRef('up');
+  const scrollDirection = useRef('up');
 
   useEffect(() => {
     let lastScrollPosition = window.scrollY;
     const handleScroll = () =>{
       const currentScrollPostion = window.scrollY;
       if (currentScrollPostion > lastScrollPosition){
-        scrolling.current 
+        scrollDirection.current = 'down'
+      } else {
+        scrollDirection.current = 'up'
       }
     }
+    window.addEventListener('scroll', handleScroll);
+    window.removeEventListener('scroll', handleScroll)
   }
   )
 
