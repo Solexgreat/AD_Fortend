@@ -7,11 +7,13 @@ import * as Yup from 'yup';
 import { useFormik } from 'formik';
 import FullScreenSection from "./FullScreenSection";
 import useSubmit from './hook/useSubmit';
+import { useAlertContext } from "../context/alertContext";
 
 
 
 const ContactMeSection = () => {
     const {isLoading, Response, submit} = useSubmit();
+    const {onOpen, state} = useAlertContext();
     const formik = useFormik({
         intialValues: {
             firstName: '',
@@ -39,7 +41,15 @@ const ContactMeSection = () => {
                     Contact Me
                 </Heading>
                 <Box w="100%" rounded="md" p={6}>
-                    <form onSubmit={formik.handleSubmit}>
+                <form onSubmit={(e) => {
+                        e.preventDefault();
+                        formik.handleSubmit();
+                        onOpen(response.type, response.message);
+                        if (response.type === "success") {
+                        alert(`${formik.values.firstName}`)
+                        }
+                        alert(`${state.message}`);
+                        formik.resetForm()}}>
                         <VStack spacing={4}>
                             <FormControl isInvalid={formik.errors.firstName && formik.touched.firstName}>
                                     <FormLabel htmlFor="firstName">
