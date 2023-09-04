@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Box, FormControl, FormLabel, Heading, 
     Textarea, VStack, FormErrorMessage,
      Input, Select, Button} from "@chakra-ui/react";
@@ -17,7 +17,7 @@ const ContactMeSection = () => {
         intialValues: {
             firstName: '',
             email:'',
-            type: 'hire me',
+            type: 'hireMe',
             comment: '',
         },
         onSubmit: (values) => { submit("",values) },
@@ -29,6 +29,15 @@ const ContactMeSection = () => {
             comment: Yup.string().min(25, "Must be at least 25 characters").required("Required")
     })
     })
+
+    useEffect(() => {
+        if (response.type === "success") {
+            onOpen(response.type, response.message);
+        } else {
+            onOpen(response.type, response.message)
+        }
+    }, [response])
+
     return (
         <FullScreenSection
         isDarkBackground
@@ -43,11 +52,7 @@ const ContactMeSection = () => {
                 <form onSubmit={(e) => {
                         e.preventDefault();
                         formik.handleSubmit();
-                        if (response.type === "success") {
-                            onOpen(response.type, response.message);
-                        } else {
-                            onOpen(response.type, response.message)
-                        }
+                        
                         formik.resetForm();
                         }
                         }>
