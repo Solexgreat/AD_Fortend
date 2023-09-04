@@ -31,11 +31,13 @@ const ContactMeSection = () => {
     })
 
     useEffect(() => {
-        if (response.type === "success") {
+        if (response) {
             onOpen(response.type, response.message);
-        } else {
-            onOpen(response.type, response.message)
+            if(response.type === "success"){
+                formik.resetForm();
+            }
         }
+        
     }, [response])
 
     return (
@@ -52,12 +54,10 @@ const ContactMeSection = () => {
                 <form onSubmit={(e) => {
                         e.preventDefault();
                         formik.handleSubmit();
-                        
-                        formik.resetForm();
                         }
                         }>
                         <VStack spacing={4}>
-                            <FormControl isInvalid={formik.errors.firstName && formik.touched.firstName}>
+                            <FormControl isInvalid={!!formik.errors.firstName && formik.touched.firstName}>
                                     <FormLabel htmlFor="firstName">
                                         firstName
                                     </FormLabel>
@@ -71,16 +71,16 @@ const ContactMeSection = () => {
                                         {formik.errors.firstName && formik.touched.firstName}
                                     </FormErrorMessage>
                             </FormControl>
-                            <FormControl isInvalid={formik.errors.email && formik.touched.email}>
+                            <FormControl isInvalid={!!formik.errors.email && formik.touched.email}>
                                     <FormLabel htmlFor="email">
                                         Email Address
                                     </FormLabel>
                                     <Input
-                                    {...formik.getFieldProps("email")}
                                     id="email"
                                     name="email"
                                     type="email"
                                     value={formik.values.email}
+                                    {...formik.getFieldProps("email")}
                                      />
                                     <FormErrorMessage>
                                         {formik.errors.email && formik.touched.email}
