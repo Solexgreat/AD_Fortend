@@ -17,16 +17,16 @@ const ContactMeSection = () => {
         intialValues: {
             firstName: '',
             email:'',
-            type: '',
+            type: 'hire me',
             comment: '',
         },
-        onSubmit: (values) => { submit(values) },
+        onSubmit: (values) => { submit("",values) },
     
         validationSchema: Yup.object({
             firstName: Yup.string().required("Required"),
             email: Yup.string().required("Required").email("Invalid email address"),
             type: Yup.string().optional(),
-            comment: Yup.string().min(25).required("Required")
+            comment: Yup.string().min(25, "Must be at least 25 characters").required("Required")
     })
     })
     return (
