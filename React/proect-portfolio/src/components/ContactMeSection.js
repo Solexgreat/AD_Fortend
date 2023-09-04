@@ -12,7 +12,7 @@ import useSubmit from '../hook/useSubmit';
 
 const ContactMeSection = () => {
     const {isLoading, response, submit} = useSubmit();
-    const {onOpen} = useAlertContext();
+    const { onOpen } = useAlertContext();
 
     const formik = useFormik({
         intialValues: {
