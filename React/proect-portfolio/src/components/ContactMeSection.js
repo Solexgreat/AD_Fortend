@@ -6,13 +6,14 @@ import { useAlertContext } from "../context/alertContext";
 import * as Yup from 'yup';
 import { useFormik } from 'formik';
 import FullScreenSection from "./FullScreenSection";
-import useSubmit from './hook/useSubmit';
+import useSubmit from '../hook/useSubmit';
 
 
 
 const ContactMeSection = () => {
     const {isLoading, response, submit} = useSubmit();
     const {onOpen} = useAlertContext();
+
     const formik = useFormik({
         intialValues: {
             firstName: '',
@@ -28,7 +29,7 @@ const ContactMeSection = () => {
             type: Yup.string().optional(),
             comment: Yup.string().min(25, "Must be at least 25 characters").required("Required")
     })
-    })
+    });
 
     useEffect(() => {
         if (response) {
@@ -38,7 +39,7 @@ const ContactMeSection = () => {
             }
         }
         
-    }, [response])
+    }, [response]);
 
     return (
         <FullScreenSection
@@ -80,6 +81,7 @@ const ContactMeSection = () => {
                                     name="email"
                                     type="email"
                                     value={formik.values.email}
+                                    onChange={formik.handleChange}
                                     {...formik.getFieldProps("email")}
                                      />
                                     <FormErrorMessage>
@@ -90,7 +92,9 @@ const ContactMeSection = () => {
                                     <FormLabel htmlFor="type">
                                         Type of enquiry
                                     </FormLabel>
-                                    <Select id="type" name="type">
+                                    <Select id="type" 
+                                            name="type"
+                                            {...formik.getFieldProps("type")}>
                                         <option value="hireMe">Freelance project proposal</option>
                                         <option value="openSource">
                                             Open source consultancy session
@@ -98,7 +102,7 @@ const ContactMeSection = () => {
                                         <option value="other">Other</option>
                                     </Select>
                             </FormControl>
-                            <FormControl isInvalid={formik.errors.comment && formik.touched.comment}>
+                            <FormControl isInvalid={!!formik.errors.comment && formik.touched.comment}>
                                 <FormLabel htmlFor="comment">
                                     Your message
                                 </FormLabel>
