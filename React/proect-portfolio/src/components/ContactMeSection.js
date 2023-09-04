@@ -7,13 +7,12 @@ import * as Yup from 'yup';
 import { useFormik } from 'formik';
 import FullScreenSection from "./FullScreenSection";
 import useSubmit from './hook/useSubmit';
-import { useAlertContext } from "../context/alertContext";
 
 
 
 const ContactMeSection = () => {
-    const {isLoading, Response, submit} = useSubmit();
-    const {onOpen, state} = useAlertContext();
+    const {isLoading, response, submit} = useSubmit();
+    const {onOpen} = useAlertContext();
     const formik = useFormik({
         intialValues: {
             firstName: '',
@@ -44,21 +43,24 @@ const ContactMeSection = () => {
                 <form onSubmit={(e) => {
                         e.preventDefault();
                         formik.handleSubmit();
-                        onOpen(response.type, response.message);
                         if (response.type === "success") {
-                        alert(`${formik.values.firstName}`)
+                            onOpen(response.type, response.message);
+                        } else {
+                            onOpen(response.type, response.message)
                         }
-                        alert(`${state.message}`);
-                        formik.resetForm()}}>
+                        formik.resetForm();
+                        }
+                        }>
                         <VStack spacing={4}>
                             <FormControl isInvalid={formik.errors.firstName && formik.touched.firstName}>
                                     <FormLabel htmlFor="firstName">
-                                        Name
+                                        firstName
                                     </FormLabel>
                                     <Input
                                     id="firstName"
                                     name="firstName"
                                     value={formik.values.firstName}
+                                    onChange={formik.handleChange()}
                                     {...formik.getFieldProps("firstName")} />
                                     <FormErrorMessage>
                                         {formik.errors.firstName && formik.touched.firstName}
