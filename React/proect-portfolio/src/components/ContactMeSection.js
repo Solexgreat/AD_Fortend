@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { Box, FormControl, FormLabel, Heading, 
     Textarea, VStack, FormErrorMessage,
      Input, Select, Button} from "@chakra-ui/react";
@@ -38,7 +38,7 @@ const ContactMeSection = () => {
                 formik.resetForm();
             }
         }
-        
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [response]);
 
     return (
