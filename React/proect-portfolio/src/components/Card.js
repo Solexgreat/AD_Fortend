@@ -20,9 +20,9 @@ const Card = ({title, description, imageSrc}) =>{
             p={6}
             pb={0}
             >
-                <Text color="black" fontWeight="semibold">
+                <Heading color="black" fontWeight="semibold">
                     {title}
-                </Text>
+                </Heading>
                 <Text color="gray.500"  mt={5} mb={20} fontSize={14} >
                     {description}
                 </Text>

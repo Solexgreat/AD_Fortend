@@ -7,7 +7,7 @@ export const AlertProvide = ({ children }) =>{
         isOpen: false,
         type: "success",
         message:''
-    })
+    });
 
     return(
         <AlertContext.Provider
