@@ -16,10 +16,9 @@ const LandingSection =() => {
         isDarkBackground={false}
         backgroundColor="#2A4365">
             <VStack
-            alignItems="center"
-            spacing={8}
+            spacing={16}
             >
-                <VStack spacing={2}>
+                <VStack spacing={2} alignItems="center">
                     <Avatar size='2xl' src="https://i.pravatar.cc/150?img=7"/>
                     <Heading as='h6' size="xs" color="white" >
                         {greeting}

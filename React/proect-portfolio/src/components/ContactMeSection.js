@@ -52,11 +52,7 @@ const ContactMeSection = () => {
                     Contact Me
                 </Heading>
                 <Box w="100%" rounded="md" p={6}>
-                <form onSubmit={(e) => {
-                        e.preventDefault();
-                        formik.handleSubmit();
-                        }
-                        }>
+                <form onSubmit={formik.handleSubmit}>
                         <VStack spacing={4}>
                             <FormControl isInvalid={!!formik.errors.firstName && formik.touched.firstName}>
                                     <FormLabel htmlFor="firstName">
