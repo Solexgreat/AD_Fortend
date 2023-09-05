@@ -48,26 +48,30 @@ function Header() {
     }
   }
 
-  const scrollDirection = useRef('up');
+  const scrollRef = useRef(null);
 
   useEffect(() => {
     let lastScrollPosition = window.scrollY;
     const handleScroll = () =>{
       const currentScrollPostion = window.scrollY;
-      if (currentScrollPostion > lastScrollPosition){
-        scrollDirection.current = 'down'
-      } else {
-        scrollDirection.current = 'up'
+      const scrollDirection = scrollRef.current;
+      if (!scrollDirection){
+        return;
       }
-      lastScrollPosition = currentScrollPostion
+      if (currentScrollPostion > lastScrollPosition){
+        scrollDirection.current = 'down';
+      } else {
+        scrollDirection.current = 'up';
+      }
+      lastScrollPosition = currentScrollPostion;
     }
     window.addEventListener('scroll', handleScroll);
     return () =>{
-      window.removeEventListener('scroll', handleScroll)
+      window.removeEventListener('scroll', handleScroll);
     }
   },
   []
-  )
+  );
 
   return(
     <ChakraProvider >
@@ -80,7 +84,7 @@ function Header() {
       transitionProperty="transform"
       transitionDuration=".3s"
       transitionTimingFunction="ease-in-out"
-      transform={scrollDirection.current === 'down' ? 'translateY(-200px)' : 'translateY(0)'}
+      transform={scrollRef.current === 'down' ? 'translateY(-200px)' : 'translateY(0)'}
       backgroundColor="#18181b" 
       >
         <Box color='white' maxW="1280px" m="0 auto">
@@ -94,14 +98,14 @@ function Header() {
             <nav>
               <HStack spacing={8}>
                 {socials.map(({icon, url}) =>
-                <a 
+                <a
                 key ={url}
                 href={url}
                 rel="noopener noreferrer">
                   <FontAwesomeIcon icon={icon} size="2x" key={url}/>
                 </a>
                 )}
-              </HStack>       
+              </HStack>
             </nav>
             <nav>
               <HStack spacing={10}>
