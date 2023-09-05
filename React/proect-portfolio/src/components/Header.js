@@ -92,22 +92,15 @@ function Header() {
           alignItems="center"
           >
             <nav>
-              <HStack spacing={5}>
-                <a href={socials[0].url }>
-                  <FontAwesomeIcon icon={socials[0].icon} size="2x" />
+              <HStack spacing={8}>
+                {socials.map((icon, url) =>
+                <a 
+                key ={url}
+                href={url}
+                rel="noopener noreferrer">
+                  <FontAwesomeIcon icon={icon} size="2x" key={url}/>
                 </a>
-                <a href={socials[1].url}>
-                  <FontAwesomeIcon icon={socials[1].icon}  size="2x"/>
-                </a>
-                <a href={socials[2].url}>
-                  <FontAwesomeIcon icon={socials[2].icon} size="2x"/>
-                </a>
-                <a href={socials[3].url}>
-                  <FontAwesomeIcon icon={socials[3].icon} size="2x"/>
-                </a> 
-                <a href={socials[4].url}>
-                  <FontAwesomeIcon icon={socials[4].icon} size="2x"/>
-                </a>  
+                )}
               </HStack>       
             </nav>
             <nav>

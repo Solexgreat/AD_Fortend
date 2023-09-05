@@ -2,7 +2,7 @@ import { useState, createContext, useContext } from "react";
 
 const AlertContext = createContext(undefined);
 
-export const AlertProvide = ({ children }) =>{
+export const AlertProvider = ({ children }) =>{
     const [state, setState] = useState({
         isOpen: false,
         type: "success",

@@ -65,8 +65,8 @@ const ContactMeSection = () => {
                                     <Input
                                     id="firstName"
                                     name="firstName"
-                                    value={formik.values.firstName}
-                                    onChange={formik.handleChange()}
+                                    // value={formik.values.firstName}
+                                    // onChange={formik.handleChange()}
                                     {...formik.getFieldProps("firstName")} />
                                     <FormErrorMessage>
                                         {formik.errors.firstName && formik.touched.firstName}
@@ -80,8 +80,8 @@ const ContactMeSection = () => {
                                     id="email"
                                     name="email"
                                     type="email"
-                                    value={formik.values.email}
-                                    onChange={formik.handleChange}
+                                    // value={formik.values.email}
+                                    // onChange={formik.handleChange}
                                     {...formik.getFieldProps("email")}
                                      />
                                     <FormErrorMessage>
@@ -111,7 +111,7 @@ const ContactMeSection = () => {
                                 id="comment"
                                 name="comment"
                                 height={250}
-                                value={formik.values.comment}
+                                // value={formik.values.comment}
                                 />
                                 <FormErrorMessage>
                                     {formik.errors.comment && formik.touched.comment}
