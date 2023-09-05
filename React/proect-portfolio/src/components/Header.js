@@ -93,7 +93,7 @@ function Header() {
           >
             <nav>
               <HStack spacing={8}>
-                {socials.map((icon, url) =>
+                {socials.map(({icon, url}) =>
                 <a 
                 key ={url}
                 href={url}
