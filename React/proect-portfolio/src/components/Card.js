@@ -22,12 +22,16 @@ const Card = ({title, description, imageSrc}) =>{
             spacing={5}
             alignItems="flex-start"
             >
-                <Heading as="h4" color="black" fontWeight="semibold">
-                    {title}
-                </Heading>
-                <Text color="gray.500"  mt={5} mb={20} fontSize={14} >
-                    {description}
-                </Text>
+                <HStack justifyContent="center" alignItems="center">
+                    <Heading as="h4" color="black" fontWeight="semibold">
+                        {title}
+                    </Heading>
+                </HStack>
+                <HStack>
+                    <Text color="gray.500"  mt={5} mb={20} fontSize={14} >
+                        {description}
+                    </Text>
+                </HStack>
                 <HStack>
                     <Text color="black" fontWeight="semibold">
                         <p> See more </p> <FontAwesomeIcon icon={faArrowRight} size="1x"  color="black"/>
