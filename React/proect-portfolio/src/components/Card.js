@@ -19,7 +19,8 @@ const Card = ({title, description, imageSrc}) =>{
             <Image src={imageSrc} alt={title}/>
             <VStack
             p={6}
-            pb={0}
+            spacing={5}
+            alignItems="flex-start"
             >
                 <Heading as="h4" color="black" fontWeight="semibold">
                     {title}
