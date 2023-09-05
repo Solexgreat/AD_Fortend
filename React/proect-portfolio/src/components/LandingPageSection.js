@@ -11,7 +11,7 @@ const bio2 = "specialised in React";
 const LandingSection =() => {
     return(
         <FullScreenSection
-        justifycontent="center"
+        justifyContent="center"
         alignItems="center"
         isDarkBackground={false}
         backgroundColor="#2A4365">
