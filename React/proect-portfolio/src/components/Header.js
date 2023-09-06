@@ -36,18 +36,8 @@ const socials =[
   },
 ]
 
-function Header() {
-  const handleclick = (achor) =>{
-    const id = `${achor}-section`;
-    const element = document.getElementById(id)
-    if (element){
-      element.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      })
-    }
-  }
 
+function Header() {
   const scrollRef = useRef(null);
 
   useEffect(() => {
@@ -59,9 +49,9 @@ function Header() {
         return;
       }
       if (currentScrollPostion > lastScrollPosition){
-        scrollDirection.current = 'down';
+        scrollDirection.style.transform = 'translateY(-200px)';
       } else {
-        scrollDirection.current = 'up';
+        scrollDirection.style.transform = 'translateY(0)';
       }
       lastScrollPosition = currentScrollPostion;
     }
@@ -72,6 +62,18 @@ function Header() {
   },
   []
   );
+
+
+  const handleclick = (achor) =>{
+    const id = `${achor}-section`;
+    const element = document.getElementById(id)
+    if (element){
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      })
+    }
+  }
 
   return(
     <ChakraProvider >
@@ -84,8 +86,8 @@ function Header() {
       transitionProperty="transform"
       transitionDuration=".3s"
       transitionTimingFunction="ease-in-out"
-      transform={scrollRef.current === 'down' ? 'translateY(-200px)' : 'translateY(0)'}
-      backgroundColor="#18181b" 
+      backgroundColor="#18181b"
+      ref={scrollRef} 
       >
         <Box color='white' maxW="1280px" m="0 auto">
           <HStack
