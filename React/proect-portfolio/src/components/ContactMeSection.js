@@ -25,7 +25,7 @@ const ContactMeSection = () => {
     
         validationSchema: Yup.object({
             firstName: Yup.string().required("Required"),
-            email: Yup.string().required("Required").email("Invalid email address"),
+            email: Yup.string().email("Invalid email address").required("Required"),
             type: Yup.string().optional(),
             comment: Yup.string().min(25, "Must be at least 25 characters").required("Required")
     })
@@ -61,11 +61,9 @@ const ContactMeSection = () => {
                                     <Input
                                     id="firstName"
                                     name="firstName"
-                                    // value={formik.values.firstName}
-                                    // onChange={formik.handleChange()}
-                                    {...formik.getFieldProps("firstName")} />
+                                    { ...formik.getFieldProps("firstName")} />
                                     <FormErrorMessage>
-                                        {formik.errors.firstName && formik.touched.firstName}
+                                        {formik.errors.firstName}
                                     </FormErrorMessage>
                             </FormControl>
                             <FormControl isInvalid={!!formik.errors.email && formik.touched.email}>
@@ -76,12 +74,10 @@ const ContactMeSection = () => {
                                     id="email"
                                     name="email"
                                     type="email"
-                                    // value={formik.values.email}
-                                    // onChange={formik.handleChange}
                                     {...formik.getFieldProps("email")}
                                      />
                                     <FormErrorMessage>
-                                        {formik.errors.email && formik.touched.email}
+                                        {formik.errors.email}
                                     </FormErrorMessage>
                             </FormControl>
                             <FormControl>
@@ -110,7 +106,7 @@ const ContactMeSection = () => {
                                 // value={formik.values.comment}
                                 />
                                 <FormErrorMessage>
-                                    {formik.errors.comment && formik.touched.comment}
+                                    {formik.errors.comment}
                                 </FormErrorMessage>
                             </FormControl>
                             <Button
