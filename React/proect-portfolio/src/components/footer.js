@@ -12,7 +12,10 @@ const Footer = () =>{
                <Flex
                alignItems="center"
                justifyContent="center"
-               color="white">
+               color="white"
+               margin="0 auto"
+               px={10}
+               maxW="120px">
                 <p>Solexgreat • © 2022</p>
                </Flex>
             </footer>
