@@ -15,11 +15,11 @@ const ContactMeSection = () => {
     const { onOpen } = useAlertContext();
 
     const formik = useFormik({
-        intialValues: {
-            firstName: '',
-            email:'',
-            type: 'hireMe',
-            comment: '',
+        initialValues: {
+            firstName: "",
+            email:"",
+            type: "hireMe",
+            comment: "",
         },
         onSubmit: (values) => { submit("",values) },
     
@@ -48,7 +48,7 @@ const ContactMeSection = () => {
         py={16}
         spacing={8}>
             <VStack w="1024px" p={32} alignItems="flex-start">
-                <Heading>
+                <Heading as='h1' id="contactme-section">
                     Contact Me
                 </Heading>
                 <Box w="100%" rounded="md" p={6}>
