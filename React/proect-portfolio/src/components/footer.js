@@ -14,8 +14,9 @@ const Footer = () =>{
                justifyContent="center"
                color="white"
                margin="0 auto"
-               px={10}
-               maxW="120px">
+               px={12}
+               maxW="1024px"
+               height={18}>
                 <p>Solexgreat • © 2022</p>
                </Flex>
             </footer>
