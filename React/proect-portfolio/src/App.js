@@ -5,7 +5,7 @@ import ProjectsSection from './components/ProjectsSection';
 import ContactMeSection from './components/ContactMeSection';
 import Alert from './components/Alert';
 import { AlertProvider } from './context/alertContext';
-import {footer} from './components/footer';
+import Footer from './components/footer';
 import {ChakraProvider} from '@chakra-ui/react';
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
           <LandingSection/>
           <ProjectsSection/>
           <ContactMeSection/>
-          </Footer>
+          <Footer/>
           <Alert/>
         </main>
       </AlertProvider>
