@@ -3,7 +3,7 @@ import { Flex, VStack } from "@chakra-ui/react"
 
 
 
-const footer = () =>{
+const Footer = () =>{
     return(
         <VStack
         backgroundColor="#18181b"
@@ -20,4 +20,4 @@ const footer = () =>{
     )
 }
 
-export default footer;
+export default Footer;

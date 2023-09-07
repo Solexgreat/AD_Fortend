@@ -86,7 +86,8 @@ const ContactMeSection = () => {
                                     </FormLabel>
                                     <Select id="type" 
                                             name="type"
-                                            {...formik.getFieldProps("type")}>
+                                            {...formik.getFieldProps("type")}
+                                            color="black">
                                         <option value="hireMe">Freelance project proposal</option>
                                         <option value="openSource">
                                             Open source consultancy session
